@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./client/resources/css/index.css">
+    <title>Big Al Goes Social</title>
+</head>
+<body onload="handleOnLoad()">
+    <!--Read in our Javascript-->
+    <script src="./client/resources/scripts/api.js"></script>
+    <script src="./client/resources/scripts/index.js"></script>
+    <!--Navbar Section-->
+    <nav class="navbar">
+        <ul>
+            <li><a class="red" href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!--Banner Section-->
+    <div class="banner">
+        <h1>Big Al's Landing Page</h1>
+        <img id = "small-bigal" src= "client/resources/images/bigal1.png" alt="">
+        <p>Because everything is better with Big Al</p>
+    </div>
+
+     <!--Social Media Section--> 
+     <div class="social-section">
+         <span id="social" class="bold">Big Al Goes Social</span> 
+         <p class="bold">Big Al's 321 Social Media</p>
+     </div>
+            <!-- Column for available books with a size of 3-->
+            <div class ="container">
+              <div class= "row">
+                <div class= "col-md-3">
+                  <h3>Click on new to add a post. Click on a specific post to edit or delete.</h3>
+                  <h3>Current Posts</h3>
+                  <div id="posts"></div>
+                </div>
+                <!-- Column for Book Information with a size of 6-->
+                <div class= "col-md-6">
+                  <h3 class="inputHeader">Post Information</h3>
+                  <form onsubmit="return false;" method="post">
+                    <!--Labels and input boxes are created for each book field-->
+                  <label for="posttext">Post Text:</label>
+                  <input type="text" id="posttext" name="posttext" readOnly><br><br>
+                  </form>
+                  <!--New, edit, delete, rent, and return buttons are created-->
+                  <div class="btnRow">
+                    <button id="newButton" class="btn btn-primary" onclick = "handleNewClick()">New</button>
+                    <button id="editButton" class="btn btn-primary" onclick = "handleEditClick()">Edit</button>
+                    <button id="deleteButton" class="btn btn-primary" onclick = "handleDeleteClick()">Delete</button>
+                    <br>
+                    <span id="saveButton"></span>
+                  </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    </body>
+</html>
